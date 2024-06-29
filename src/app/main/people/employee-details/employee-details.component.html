@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="header">
+        <div *ngIf="imageUrl" class="profile-picture-container">
+            <img [src]="imageUrl" alt="Profile Picture" class="profile-picture">
+        </div>
+
+        <!-- Default thumbnail -->
+        <div *ngIf="!imageUrl" class="profile-picture-container">
+            <img src="assets/img/Profile-Avatar-PNG.png" alt="Default Thumbnail" class="profile-picture">
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <div class="top-content">
+                <h4>{{data.empName}}</h4>  
+                <h5>{{'#' + data.id}}</h5>
+                <div class="decoration">
+                    <div>
+                        <i class="star fas fa-star" [class.active]="data.isStarred">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Contact Details______________________</h2>
+            </div>
+            <div class="decoration">
+                <label for="">Employee Name :</label>
+                <h4>{{data.empName}}</h4>
+            </div>
+            <div class="decoration">
+                <label for="">Employee Age :</label>
+                <h4>{{data.age}}</h4>
+            </div>
+            <div class="decoration">
+                <label for="">Employee DOB :</label>
+                <h4>{{data.dob}}</h4>
+            </div>
+            <div class="decoration">
+                <label for="">Employee PhoneNo :</label>
+                <h4>{{data.phoneNo}}</h4>
+            </div>
+            <div>
+                <h2>Catagory___________________________</h2>
+            </div>
+            <div class="decoration">
+                <label for="">Location :</label>
+                <h4>Chennai</h4>
+            </div>
+            <div>
+                <h2>Other Information____________________</h2>
+            </div>
+            <div class="decoration">
+                <label for="">Joining Date :</label>
+                <h4></h4>
+            </div>
+        </div>
+    </div>
+</div>

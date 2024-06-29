@@ -1,0 +1,22 @@
+<div class="EmployeeList" *ngFor="let data of EmpList" (click)="GetEmployeeDetails(data.id)">
+    <div>
+        <div *ngIf="imageUrl" class="profile-picture-container">
+            <img [src]="imageUrl" alt="Profile Picture" class="profile-picture">
+        </div>
+
+        <!-- Default thumbnail -->
+        <div *ngIf="!imageUrl" class="profile-picture-container">
+            <img src="assets/img/Profile-Avatar-PNG.png" alt="Default Thumbnail" class="profile-picture">
+        </div>
+    </div>
+    <div>
+        <h5>{{data.empName}}</h5>
+    </div>
+    <div>
+        <p>(#{{data.id}})</p>
+    </div>
+    <div>
+        <i class="star fas fa-star" [class.active]="data.isStarred" (click)="toggleStar(data.id)">
+        </i>
+    </div>
+</div>

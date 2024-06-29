@@ -1,0 +1,55 @@
+<div class="nav-items">
+  <div class="nav-item" routerLink="/dashboard/main" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">
+    <span>Home</span>
+  </div>
+  <div class="nav-item" routerLink="main/location" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">
+    <span>Locations</span>
+  </div>
+  <div class="nav-item" (click)="toggle(2)" routerLink="main/feedBack" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>Salary</span>
+    <div [@slideToggle]="expandedIndex === 2 ? 'expanded' : 'collapsed'" class="sub-items">
+      <hr>
+      <div class="sub-item">Shop 1</div>
+      <div class="sub-item">Shop 2</div>
+      <div class="sub-item">Shop 3</div>
+    </div>
+  </div>
+  <div class="nav-item" (click)="toggle(3)" routerLink="main/attendance" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>Attendance</span>
+  </div>
+  <div class="nav-item" (click)="toggle(4)" routerLink="main/feedBack" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>Document Center</span>
+    <div [@slideToggle]="expandedIndex === 4 ? 'expanded' : 'collapsed'" class="sub-items">
+      <div class="sub-item">Sale 1</div>
+      <div class="sub-item">Sale 2</div>
+      <div class="sub-item">Sale 3</div>
+    </div>
+  </div>
+  <div class="nav-item" routerLink="main/people" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>People</span>
+  </div>
+  <div class="nav-item" (click)="toggle(6)" routerLink="main/feedBack" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>Contact</span>
+    <div [@slideToggle]="expandedIndex === 6 ? 'expanded' : 'collapsed'" class="sub-items">
+      <div class="sub-item">Contact 1</div>
+      <div class="sub-item">Contact 2</div>
+      <div class="sub-item">Contact 3</div>
+    </div>
+  </div>
+  <div class="nav-item" (click)="toggle(7)" routerLink="main/feedBack" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">
+    <span>Helpdesk</span>
+    <div [@slideToggle]="expandedIndex === 7 ? 'expanded' : 'collapsed'" class="sub-items">
+      <div class="sub-item">Help 1</div>
+      <div class="sub-item">Help 2</div>
+      <div class="sub-item">Help 3</div>
+    </div>
+  </div>
+</div>

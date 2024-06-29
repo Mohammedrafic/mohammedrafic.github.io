@@ -1,0 +1,18 @@
+<div class="search-container">
+    <input class="search-input" type="text" placeholder="Enter Emp.Name or ID" (keydown)="searchfilter($event)">
+    <span class="search-icon"><i class="fas fa-search"></i></span>
+    <span class="filter-icon" (click)="toggleFilter()"><i class="fas fa-filter"></i></span>
+  
+    <div class="filter-menu" *ngIf="filterVisible">
+      <label>
+        <input type="checkbox"> Filter 1
+      </label>
+      <label>
+        <input type="checkbox"> Filter 2
+      </label>
+      <label>
+        <input type="checkbox"> Filter 3
+      </label>
+    </div>
+  </div>
+  

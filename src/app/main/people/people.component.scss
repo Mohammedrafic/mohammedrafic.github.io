@@ -1,0 +1,86 @@
+.left-content {
+    display: list-item;
+    border: 2px solid gray;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 400px;
+    height: 600px;
+    overflow: auto;
+    padding: 10px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.right-content {
+    border: 2px solid gray;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 700px;
+    height: 600px;
+    overflow: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.ListGrid{
+    margin-top: 40px;
+}
+
+.EmployeeList:hover{
+    background-color: rgb(193, 193, 242);
+}
+
+.container{
+    display: flex;
+    gap: 50px;
+}
+
+.header{
+    display: flex;
+    gap: 20px;
+    margin: 15px 0px 6px 35px;
+}
+
+
+/* navbar.component.css */
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .nav-item::after {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-item:hover::after,
+  .nav-item:focus::after,
+  .nav-item.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .nav-item:focus,
+  .nav-item.active {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    color: black;
+  }
+  
+//   .nav-item:hover {
+//     color: gray;
+//   }
+  

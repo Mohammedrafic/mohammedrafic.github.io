@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <div class="header">
+            <div class="nav-item" (click)="activateNavItem('starred')" [class.active]="activeNavItem === 'starred'"
+                tabindex="0">Starred</div>
+            <div class="nav-item" (click)="activateNavItem('all')" [class.active]="activeNavItem === 'all'"
+                tabindex="0">All</div>
+        </div>
+        <div class="container">
+            <div class="left-content">
+                <div class="search-container">
+                    <app-search-filter (searchItem)="searchFilter($event)"></app-search-filter>
+                </div>
+                <div class="ListGrid">
+                    <app-employee-list (IsClick)="GetEmployeeDetails($event)" [activeNavItem]="activeNavItem"></app-employee-list>
+                </div>
+            </div>  
+            <div class="right-content" *ngIf="IsClicked">
+                <app-employee-details [data]="EmployeeData"></app-employee-details>
+            </div>
+        </div>
+    </div>
+</div>
