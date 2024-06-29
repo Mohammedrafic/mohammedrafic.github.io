@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EmployeeService {
 
-  private BaseURL = environment.BaseURL;
+  private BaseURL = environment;
   constructor(private http: HttpClient) { }
 
   GetEmployeeList() : Observable<any[]>{

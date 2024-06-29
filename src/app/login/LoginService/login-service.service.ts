@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginServiceService {
 
-  private BaseURL = environment.BaseURL;
+  private BaseURL = environment;
   constructor(private http: HttpClient) { }
 
   Login(loginRequest : any) : Observable<any>{
